@@ -1,0 +1,145 @@
+class Shape(object):
+
+  def __init__(self):
+    self._pos = None
+    self._scale = None
+    self._color = None
+
+  def set_pos(self, pos):
+    self._pos = pos
+
+  def get_pos(self):
+    return self._pos
+
+  def set_scale(self, scale):
+    self._scale = scale
+
+  def get_scale(self):
+    return self._scale
+
+  def set_color(self, color):
+    self._color = color
+
+  def get_color(self):
+    return self._color
+
+  def info(self):
+    print("Position:", self._pos, "\nScale:", self._scale, "\nColor:", self._color)
+
+  def area(self):
+    print("Area of the shape")
+class Rectangle(Shape):
+
+  def __init__(self):
+    super().__init__()
+
+    self.__side1 = None
+    self.__side2 = None
+
+  def set_sides(self, side1, side2):
+    self.__side1 = side1
+    self.__side2 = side2
+
+  def get_sides(self):
+    return self.__side1, self.__side2
+
+  def info(self):
+    super().info()
+    print("Side1:", self.__side1, "\nSide2:", self.__side2)
+
+  def area(self):
+    super().area()
+    return self.__side1 * self.__side2
+class Trapezoid(Shape):
+
+  def __init__(self):
+    super().__init__()
+
+    self.__side1 = None
+    self.__side2 = None
+    self.__h = None
+
+  def set_sides(self, side1, side2):
+    self.__side1 = side1
+    self.__side2 = side2
+
+  def get_sides(self):
+    return self.__side1, self.__side2
+
+  def set_h(self, h):
+    self.__h = h
+
+  def get_h(self):
+    return self.__h
+
+  def info(self):
+    super().info()
+    print("Side1:", self.__side1, "\nSide2:", self.__side2, "\nHeight:", self.__h)
+
+  def area(self):
+    super().area()
+    return 0.5 * (self.__side1 + self.__side2)
+class Circle(Shape):
+
+  def __init__(self):
+    super().__init__()
+
+    self.__radius = None
+
+  def set_radius(self, radius):
+    self.__radius = radius
+
+  def get_sides(self):
+    return self.__radius
+
+  def info(self):
+    super().info()
+    print("Radius:", self.__radius)
+
+  def area(self):
+    super().area()
+    return 3.14 * self.__radius * self.__radius
+    #return math.pi * (self.__radius ** 2)
+rec = Rectangle()
+rec.set_pos({"x":5, "y":4})
+rec.set_scale(2)
+rec.set_color("blue")
+rec.set_sides(5, 4)
+rec.info()
+rec.area()
+Position: {'x': 5, 'y': 4} 
+Scale: 2 
+Color: blue
+Side1: 5 
+Side2: 4
+Area of tha shape
+20
+trap = Trapezoid()
+trap.set_pos({"x":1, "y":1})
+trap.set_scale(1)
+trap.set_color("orange")
+trap.set_sides(3, 8)
+trap.set_h(4)
+trap.info()
+trap.area()
+Position: {'x': 1, 'y': 1} 
+Scale: 1 
+Color: orange
+Side1: 3 
+Side2: 8 
+Height: 4
+Area of tha shape
+5.5
+circ = Circle()
+circ.set_pos({"x":10, "y":12})
+circ.set_scale(3)
+circ.set_color("green")
+circ.set_radius(3)
+circ.info()
+circ.area()
+Position: {'x': 10, 'y': 12} 
+Scale: 3 
+Color: green
+Radius: 3
+Area of tha shape
+28.259999999999998

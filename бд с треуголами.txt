@@ -1,0 +1,85 @@
+class shape ():
+    def __init__(self, positionY, positionX, scale, color):
+        self._positionY = positionY 
+        self._scale = scale 
+        self._color = color
+        self._positionX = positionX
+    
+    def get_positionY(self):
+        return self._positionY
+            
+    def set_position(self, Y):
+        self._position = Y
+    
+    def get_positionX(self):
+        return self._positionX
+            
+    def set_position(self, X):
+        self._position = X
+        
+    def get_scale(self):
+        return self._scale
+            
+    def set_scale(self, cm):
+        self._scale = cm
+        
+    def get_color(self):
+        return self._color
+            
+    def set_color(self, rgb):
+        self._color = rgb
+        
+    def info (self):
+        print("positionY:", self._positionY,"positionX:", self._positionX, "\nscale:", self._scale, "\ncolor:", self._color) 
+        
+    def area (sedeONE, sedeTWO):
+        print("plohad shape:",self.sedeONE, self.sedeTWO) 
+        
+class rectangle (shape):
+    def __init__(self, positionY, positionX, scale, color, sedeONE, sedeTWO):
+        self._positionY = positionY 
+        self._positionX = positionX
+        self._scale = scale 
+        self._color = color
+        self._sedeONE = sedeONE
+        self._sedeTWO = sedeTWO
+    
+    def get_position(self):
+        return self._position
+            
+    def set_position(self, x):
+        self._position = x
+        
+    def get_scale(self):
+        return self._scale
+            
+    def set_scale(self, cm):
+        self._scale = cm
+        
+    def get_color(self):
+        return self._color
+            
+    def set_color(self, rgb):
+        self._color = rgb
+        
+    def get_sedeONE(self):
+        return self._sedeONE
+            
+    def set_sedeONE(self, cm):
+        self._color = cm
+        
+    def get_sedeTWO(self):
+        return self._sedeTWO
+            
+    def set_sedeTWO(self, cm):
+        self._sedeTWO = cm
+        
+    def info_Rectangle (self):
+        print("position:", self._position, "\nscale:", self._scale, "\ncolor:", self._color,"\nslide 1:",self._sedeONE,"\nslide 2:",self._sedeTWO)
+    
+    def area ():
+        print("plohad Rectangle:", sedeONE * sedeTWO )
+        
+premougolnic = shape(90, 80, "BIG", "blak" )
+premougolnihe = rectangle(900, 100, "VERY BIG", "red", 20, 40)
+premougolnihe.area()
